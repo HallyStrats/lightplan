@@ -2,15 +2,23 @@ name: Keep Streamlit app awake
 
 on:
   schedule:
-    # Every 3 days at 09:00 UTC. Streamlit Cloud sleeps after ~7 days idle,
-    # so a 3-day cadence gives a 2x safety margin.
-    - cron: "0 9 */3 * *"
+    # Fires daily at 06:00 UTC. The job then sleeps a random 0-4 hours before
+    # pinging, so consecutive pings land 20-28 h apart at unpredictable times.
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     steps:
+      - name: Random delay (0-4 h)
+        if: github.event_name == 'schedule'
+        run: |
+          DELAY=$(( RANDOM % 14400 ))
+          echo "Sleeping $DELAY seconds (~$(( DELAY / 60 )) min) before ping"
+          sleep "$DELAY"
+
       - name: Ping app
         run: |
           URL="https://lightplan.streamlit.app"
