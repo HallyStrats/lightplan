@@ -15,5 +15,10 @@ jobs:
         run: |
           URL="https://lightplan.streamlit.app"
           echo "Pinging $URL"
-          curl -fsSL --retry 3 --retry-delay 10 --max-time 60 "$URL" -o /dev/null
-          echo "Ping OK"
+          # The goal is to send traffic, not validate the response. Streamlit's
+          # sleep page can bounce a JS-less client (curl exit 47), so we accept
+          # any outcome and just log the HTTP status.
+          STATUS=$(curl -sSL -o /dev/null -w "%{http_code}" \
+            --max-redirs 20 --max-time 60 \
+            -A "Mozilla/5.0 keep-awake-bot" "$URL" || echo "curl-err")
+          echo "HTTP status: $STATUS"
