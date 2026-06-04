@@ -1,0 +1,75 @@
+parameter,value
+battery.capacity_kWh,3.888
+battery.batteries_per_vehicle,1
+battery.s_full,1.0
+charger.P_CC_kW,1.702944
+charger.c_rate,0.438
+charger.cc_fraction,0.85
+charger.efficiency,1.0
+charger.cv_to_cc_ratio,1.5
+Fe.mu_Wh_per_km,34.54
+Fe.sigma_Wh_per_km,0.0
+Fe.n_samples,0
+Fs.mu_fraction,0.2
+Fs.sigma_fraction,0.0
+Fs.n_samples,0
+inputs.trips_file,trips_120km
+inputs.Fe_samples_file,
+inputs.Fs_samples_file,
+inputs.kernel_file,
+inputs.events_file,
+inputs.kernel_source,parametric_cc_cv
+mode,full_pipeline
+scenarios,"Battery swapping, Home charging, Hybrid (swap + home)"
+N_fleet,119
+N_data,119
+n_days,26
+runtime_seconds,6.8371
+results.Battery swapping.N_vehicles,119
+results.Battery swapping.N_chargers_power_based,9
+results.Battery swapping.N_chargers_concurrent,28
+results.Battery swapping.N_batteries_total_concurrent,147
+results.Battery swapping.N_batteries_total,128
+results.Battery swapping.runtime_seconds,1.5224
+results.Battery swapping.peak_mean_load_kW,14.052493325544367
+results.Battery swapping.mean_load_kW,7.972927636742446
+results.Battery swapping.peak_worst_day_load_kW,33.486243854858245
+results.Battery swapping.mean_worst_day_load_kW,15.18145154830103
+results.Battery swapping.swap_events,1687
+results.Battery swapping.home_events,0
+results.Battery swapping.soc_clamp_events,0
+results.Battery swapping.chi,0.9906365505071211
+results.Battery swapping.psi,1.9347651852075118
+results.Battery swapping.rho_R,1.762526134162418
+results.Home charging.N_vehicles,119
+results.Home charging.N_chargers_power_based,25
+results.Home charging.N_chargers_concurrent,60
+results.Home charging.N_batteries_total_concurrent,298
+results.Home charging.N_batteries_total,263
+results.Home charging.runtime_seconds,2.3598
+results.Home charging.peak_mean_load_kW,42.54210968504778
+results.Home charging.mean_load_kW,8.015431954610756
+results.Home charging.peak_worst_day_load_kW,81.87352252110684
+results.Home charging.mean_worst_day_load_kW,15.45282026037808
+results.Home charging.swap_events,0
+results.Home charging.home_events,2096
+results.Home charging.soc_clamp_events,0
+results.Home charging.chi,0.46978845797036445
+results.Home charging.psi,3.8695303704150237
+results.Home charging.rho_R,5.3075255240082315
+results.Hybrid (swap + home).N_vehicles,119
+results.Hybrid (swap + home).N_chargers_power_based,22
+results.Hybrid (swap + home).N_chargers_concurrent,46
+results.Hybrid (swap + home).N_batteries_total_concurrent,165
+results.Hybrid (swap + home).N_batteries_total,141
+results.Hybrid (swap + home).runtime_seconds,2.9547
+results.Hybrid (swap + home).peak_mean_load_kW,36.03320591310194
+results.Hybrid (swap + home).mean_load_kW,8.00466615875872
+results.Hybrid (swap + home).peak_worst_day_load_kW,58.62459517068816
+results.Hybrid (swap + home).mean_worst_day_load_kW,13.344261938972545
+results.Hybrid (swap + home).swap_events,600
+results.Hybrid (swap + home).home_events,2096
+results.Hybrid (swap + home).soc_clamp_events,0
+results.Hybrid (swap + home).chi,0.512705931171415
+results.Hybrid (swap + home).psi,1.9347651852075118
+results.Hybrid (swap + home).rho_R,4.501525135270549

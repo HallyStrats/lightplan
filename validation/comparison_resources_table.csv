@@ -1,0 +1,11 @@
+Study,App,Sim chargers,Ref chargers (peak),Sim batteries (total),Ref batteries (peak on-charge)
+Nairobi all,App 1,35,75,133,75
+Nairobi all,App 2,51,90,143,90
+Nairobi 150km,App 1,33,57,131,57
+Nairobi 150km,App 2,50,85,141,85
+Nairobi 150km,App 3,70,109,271,109
+Nairobi 120km,App 1,27,45,128,45
+Nairobi 120km,App 2,45,75,137,75
+Nairobi 120km,App 3,60,92,263,92
+Cape Town,App 1,80,80,159,185
+Cape Town,App 2,112,153,184,198

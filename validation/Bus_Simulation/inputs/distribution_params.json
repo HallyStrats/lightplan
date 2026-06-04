@@ -1,0 +1,34 @@
+{
+  "_source": "Distilled from src/execute.sh (post data-analysis update). Defaults in bus_charging_simulator.py argparse are slightly different — execute.sh is the canonical run config.",
+  "_units": {
+    "arrival_loc": "hours past midnight",
+    "arrival_scale": "hours",
+    "arrival_skew": "dimensionless (scipy.stats.skewnorm `a` parameter)",
+    "soc_mean": "percent (0-100)",
+    "soc_std": "percent",
+    "evening_arrival_fraction": "fraction of daytime bus count that also arrives in the evening"
+  },
+  "arrival_window_day": {
+    "start": "07:00",
+    "end":   "15:59",
+    "skew":  4.18,
+    "loc":   7.95,
+    "scale": 3.24
+  },
+  "arrival_window_eve": {
+    "start": "16:00",
+    "end":   "23:59",
+    "skew":  3.03,
+    "loc":   17.35,
+    "scale": 2.98
+  },
+  "soc_day":   { "mean": 54.38, "std": 17.75 },
+  "soc_eve":   { "mean": 55.35, "std": 16.07 },
+  "soc_clip":  { "lower": 1.0,  "upper": 97.0 },
+  "evening_arrival_fraction": 0.84,
+  "fleet_sizes_swept":   [30, 40, 50],
+  "charge_rates_swept":  ["30kW", "60kW"],
+  "strategies_swept":    ["unmanaged", "off_peak"],
+  "battery_capacity_kwh": 184,
+  "simulated_period":   {"start": "2025-01-01", "end": "2025-01-31"}
+}

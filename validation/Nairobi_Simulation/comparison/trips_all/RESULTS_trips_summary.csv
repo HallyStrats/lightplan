@@ -1,0 +1,59 @@
+parameter,value
+battery.capacity_kWh,3.24
+battery.batteries_per_vehicle,1
+battery.s_full,1.0
+charger.P_CC_kW,1.62
+charger.c_rate,0.5
+charger.cc_fraction,0.85
+charger.efficiency,0.95
+charger.cv_to_cc_ratio,1.5
+Fe.mu_Wh_per_km,34.56
+Fe.sigma_Wh_per_km,0.0
+Fe.n_samples,0
+Fs.mu_fraction,0.2
+Fs.sigma_fraction,0.0
+Fs.n_samples,0
+inputs.trips_file,trips
+inputs.Fe_samples_file,
+inputs.Fs_samples_file,
+inputs.kernel_file,
+inputs.events_file,
+inputs.kernel_source,parametric_cc_cv
+mode,full_pipeline
+scenarios,"Battery swapping, Hybrid (swap + home)"
+N_fleet,119
+N_data,119
+n_days,26
+runtime_seconds,6.3628
+results.Battery swapping.N_vehicles,119
+results.Battery swapping.N_chargers_power_based,15
+results.Battery swapping.N_chargers_concurrent,36
+results.Battery swapping.N_batteries_total_concurrent,155
+results.Battery swapping.N_batteries_total,134
+results.Battery swapping.runtime_seconds,2.364
+results.Battery swapping.peak_mean_load_kW,24.36764070543497
+results.Battery swapping.mean_load_kW,13.114368532775707
+results.Battery swapping.peak_worst_day_load_kW,44.9817968910994
+results.Battery swapping.mean_worst_day_load_kW,21.020507722584885
+results.Battery swapping.swap_events,3164
+results.Battery swapping.home_events,0
+results.Battery swapping.soc_clamp_events,0
+results.Battery swapping.chi,0.9964837442870202
+results.Battery swapping.psi,1.0319471354895224
+results.Battery swapping.rho_R,1.8580872303942693
+results.Hybrid (swap + home).N_vehicles,119
+results.Hybrid (swap + home).N_chargers_power_based,25
+results.Hybrid (swap + home).N_chargers_concurrent,55
+results.Hybrid (swap + home).N_batteries_total_concurrent,174
+results.Hybrid (swap + home).N_batteries_total,144
+results.Hybrid (swap + home).runtime_seconds,3.9986
+results.Hybrid (swap + home).peak_mean_load_kW,42.52334475999123
+results.Hybrid (swap + home).mean_load_kW,13.150781436665008
+results.Hybrid (swap + home).peak_worst_day_load_kW,66.94295462155216
+results.Hybrid (swap + home).mean_worst_day_load_kW,19.84841370259089
+results.Hybrid (swap + home).swap_events,1761
+results.Hybrid (swap + home).home_events,2627
+results.Hybrid (swap + home).soc_clamp_events,0
+results.Hybrid (swap + home).chi,0.6448739677722527
+results.Hybrid (swap + home).psi,1.0319471354895224
+results.Hybrid (swap + home).rho_R,3.233522278868852
